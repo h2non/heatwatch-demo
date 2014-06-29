@@ -4,6 +4,8 @@ HeatWatch demo using [heatwatch-server](https://github.com/h2non/heatwatch) and 
 
 > This is a proof of concept
 
+![heatwatch](https://github.com/h2non/heatwatch-demo/raw/master/screenshot.png "HeatWatch ScreenShot")
+
 ## Installation
 
 To run this demo, you must setup a [heatwatch](https://github.com/h2non/heatwatch) server in you computer
