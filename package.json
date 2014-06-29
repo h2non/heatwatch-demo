@@ -1,0 +1,9 @@
+{
+  "name": "heatwatch-demo",
+  "scripts": {
+    "start": "node ./node_modules/.bin/static -p 8088"
+  },
+  "dependencies": {
+    "node-static": "^0.7.3"
+  }
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HeatWatch Demo</title>
+  <style>
+    body {
+      margin: 0;  
+    }
+  </style>
+  <script type="text/javascript" src="bower_components/zepto/zepto.min.js"></script>
+  <script type="text/javascript" src="bower_components/heatmap.js/src/heatmap.js"></script>
+  <script type="text/javascript">
+    var heatmap = null
+
+    function generateHeatmap(series) {
+      var config = {
+        element: document.getElementById('heatmap'),
+        radius: 15,
+        opacity: 50
+      }
+      
+      if (!heatmap) {
+        heatmap = heatmapFactory.create(config)
+      }
+
+      heatmap.store.setDataSet({
+        max: 0,
+        data: series
+      })
+    }
+
+    function fetchData() {
+      var server = 'http://localhost:3000/metrics/' + location.hostname
+
+      $.ajax({
+        url: server,
+        headers: {
+          'x-api-token': '0e0edde8-ff7e-11e3-80d5-b2227cce2b54'
+        },
+        success: function (data) {
+          generateHeatmap(data.series)
+        }
+      })
+    }
+
+    $(document).ready(function () {
+      setInterval(fetchData, 2000)
+    })
+  </script>
+</head>
+<body id="heatmap">
+  <iframe src="http://getbootstrap.com/examples/dashboard/" width="100%" height="900" scrolling="no" border="0"></iframe>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "heatwatch-demo",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "heatmap.js": "~0.0.1",
+    "zepto": "~1.1.3"
+  }
+}
