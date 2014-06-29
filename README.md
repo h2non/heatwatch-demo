@@ -1,8 +1,6 @@
 # heatwatch-demo
 
-HeatWatch demo using [heatwatch-server](https://github.com/h2non/heatwatch) and [heatwatch.js](https://github.com/h2non/heatwatch.js)
-
-> This is a proof of concept
+HeatWatch proof of concept demo powered by [heatwatch-server](https://github.com/h2non/heatwatch) and [heatwatch.js](https://github.com/h2non/heatwatch.js)
 
 ![heatwatch](https://github.com/h2non/heatwatch-demo/raw/master/screenshot.png "HeatWatch ScreenShot")
 
